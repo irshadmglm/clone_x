@@ -17,7 +17,12 @@ nav{
     height: 55px;
     display: flex;
     align-items: center;
+    position: fixed;
+    top: 0%;
 
+}
+nav > div i{
+    color: #ffffff;
 }
 nav .left{
     width: 17%;
@@ -33,6 +38,7 @@ nav .center{
     align-items: center;
     background: #000000;
     border: 1px solid rgb(56, 56, 56);
+    opacity: .5;
 }
 nav .center div{
     height: 100%;
@@ -74,11 +80,13 @@ nav .right .search-bar input{
 }
 main{
     display: flex;
+    margin-top: 55px;
     
 }
 main .left{
     width: 17%;
    margin-left: 8%;
+   position: fixed;
 }
 main .left .bar{
     display: flex;
@@ -91,10 +99,12 @@ main .left .bar:hover{
 main .left .bar i{
     font-size: 20px;
     margin-right: 13px;
+    color: #ffffff;
 }
 main .left .bar img{
     width: 20px;
     margin-right: 15px;
+   
 }
 main .left .bar .post{
     width: 90%;
@@ -108,6 +118,10 @@ main .left .bar .post{
 }
 main .center {
     width: 40%;
+    height: 92vh;
+    overflow: hidden;
+    overflow-y: scroll;
+    margin-left: 25%;
 }
 
 main .center .input-bar {
@@ -165,6 +179,7 @@ main .center .input-bar .input-icon img {
 main .center .input-bar .input-icon i {
     font-size: 18px;
     margin: 0 5px;
+    color: #1d60d3;
 }
 main .center .input-bar .input-icon .post-btn{
  background:  rgb(75, 108, 255);
@@ -194,22 +209,50 @@ main .center .post{
     width: 100%;
     border: 1px solid #383838;
 }
-main .center .post .head{
+main .center .post .head {
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 93%;
     padding: 15px;
 }
-main .center .post .head .profile{
-    margin-right: 30px;
+
+main .center .post .head > div:nth-child(1) {
+    display: flex;
+    align-items: center; 
+    justify-content: space-between; 
+    width: 280px;
 }
-main .center .post .head .details{
+
+main .center .post .head > div:nth-child(2) > i {
+    color: #ffffff;
+}
+
+
+
+main .center .post .head .Profile-pic {
+    width: 35px; 
+    height: 35px; 
+    border-radius: 50%;
+}
+
+main .center .post .head .details {
     display: flex;
     width: 230px;
     padding: 7px;
     flex-wrap: wrap;
 }
+
+main .center .post .head .details i {
+    color: #0654db; 
+    margin-left: 8px;
+}
+
+main .center .post .head .details p {
+    color: rgb(70, 70, 70); 
+    margin-left: 8px;
+}
+
 main .center .post .footer{
     display: flex;
     align-items: center;
@@ -228,10 +271,21 @@ main .center .post .footer i {
     margin-right: 5px;
 }
 
-main .right{
+main .center::-webkit-scrollbar {
+    width: 0px;
+}
+
+main .center::-webkit-scrollbar-thumb {
+    border-radius: 20px;
+    
+}
+
+
+main .right {
     margin-left: 38px;
     margin-top: 10px;
 }
+
 main .right .subscribe {
     width: 290px;
     padding: 30px;
@@ -239,17 +293,134 @@ main .right .subscribe {
     border-radius: 15px;
     margin-bottom: 10px;
 }
-main .right .happening{
+
+main .right .subscribe-title {
+    margin-bottom: 10px;
+}
+
+main .right .subscribe-description {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+main .right .subscribe-button {
+    width: 100px;
+    height: 35px;
+    background-color: #1362eb;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main .right .happening {
     width: 290px;
     padding: 30px;
     border: 1px solid #383838;
     border-radius: 15px;
     margin-bottom: 10px;
 }
-main .right .follow{
+
+main .right .happening-item {
+    display: flex;
+    margin-top: 15px;
+}
+
+main .right .happening-img {
+    width: 70px;
+    border-radius: 3px;
+}
+
+main .right .happening-details {
+    margin-left: 10px;
+}
+
+main .right .happening-description {
+    color: rgb(101, 101, 101);
+    font-size: 13px;
+}
+
+main .right .happening-promo {
+    margin-top: 20px;
+}
+
+main .right .promo-description {
+    color: #696969;
+    font-size: 14px;
+}
+
+main .right .promo-note {
+    color: #696969;
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+main .right .promo-icon {
+    color: #696969;
+    font-size: 11px;
+}
+
+main .right .trending {
+    display: flex;
+    margin-top: 20px;
+    justify-content: space-between;
+}
+
+main .right .trending-note {
+    color: #696969;
+    font-size: 14px;
+}
+
+main .right .trending-count {
+    color: #696969;
+    font-size: 14px;
+}
+
+main .right .trending-icon {
+    color: #696969;
+}
+
+main .right .follow {
     width: 290px;
     padding: 30px;
     border: 1px solid #383838;
     border-radius: 15px;
     margin-bottom: 10px;
 }
+
+main .right .follow-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 18px;
+}
+
+main .right .follow-details {
+    display: flex;
+}
+
+main .right .follow-img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+main .right .follow-handle {
+    color: #696969;
+}
+
+main .right .follow-button {
+    width: 80px;
+    height: 35px;
+    border-radius: 20px;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main .right .follow-button h4 {
+    color: black;
+}
+
